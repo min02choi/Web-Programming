@@ -1,42 +1,30 @@
 <element name="article" xmlns="http://relaxng.org/ns/structure/1.0" >
-    <element name="article">
-        <element name="section">
-            <element name="title">
-                <element name="main-title">
-                    <text/>
-                </element>
-                <zeroOrMore>
-                    <element name="sub-title">
-                        <text/>
-                    </element>
-                </zeroOrMore>
-            </element>
-            <element name="content">
-                <text/>
-            </element>
-            <element name="date">
-                <element name="yy"><text/></element>
-                <element name="mm"><text/></element>
-                <element name="dd"><text/></element>
-                <element name="time"><text/></element>
-            </element>
+    <element name="section">
+        <element name="title">
+            <element name="main-title"><text/></element>
+            <zeroOrMore>
+                <element name="sub-title"><text/></element>
+            </zeroOrMore>
         </element>
-        <element name="reporter">
-            <element name="name">
-                <element name="first_name"> <text/> </element>
-                <element name="last_name"> <text/> </element>
-            </element>
-            <element name="company"><text/></element>
-            <oneOrMore>
-                <choice>
-                    <element name="phone_num">
-                        <text />
-                    </element>
-                    <element name="email">
-                        <text/>
-                    </element>
-                </choice>
-            </oneOrMore>
+        <element name="content"><text/></element>
+        <element name="date">
+            <element name="yy"><text/></element>
+            <element name="mm"><text/></element>
+            <element name="dd"><text/></element>
+            <element name="time"><text/></element>
         </element>
+    </element>
+    <element name="reporter">
+        <element name="name">
+            <element name="first_name"><text/></element>
+            <element name="last_name"><text/></element>
+        </element>
+        <element name="company"><text/></element>
+        <oneOrMore>
+            <choice>
+                <element name="phone_num"><text/></element>
+                <element name="email"><text/></element>
+            </choice>
+        </oneOrMore>
     </element>
 </element>
