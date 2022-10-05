@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<article>
+    <section>
+        <title>
+            <main-title>美 보안업체 "급증하는 러시아 해커 공격 뒤엔 軍 정보조직"</main-title>
+            <sub-title>"러시아軍, 해킹 사실 부인 위해 민간 해커 앞세워"</sub-title>
+        </title>
+        <content>
+            러시아의 군 정보조직이 민간 해커 그룹과 손을 잡고 우크라이나와 국제사회에 대해 대대적인 침투 시도를 벌이고 있다는 분석이 나왔다. 월스트리트저널(WSJ)은 23일(현지시간) 구글이 인수한 사이버보안 전문업체 맨디언트가 최근 수개월간 러시아군 정보조직인 총정찰국(GRU)이 민간 해커들과의 협력 작전을 펼친 사례들을 네 차례 확인했다고 보도했다. 맨디언트에 따르면 GRU는 먼저 표적이 된 외국 정부 기관이나 기업의 컴퓨터에 '와이퍼'로 불리는 악성코드를 침투시켜 백신 프로그램을 무력화시킨다. 러시아의 민간 해커 그룹은 GRU의 사전 작업이 성공하면 24시간 이내에 피해 기관에서 빼낸 정보를 공개해 2차 손해를 끼친다. 실제로 러시아의 해커 그룹 '핵넷'(XakNet)은 지난 4월 우크라이나 외무부 기밀문서를 러시아 언론에 유포하기도 했다.
+        </content>
+        <date>
+            <yy>2022</yy>
+            <mm>09</mm>
+            <dd>24</dd>
+            <time>00:33</time>
+        </date>
+    </section>
+    <reporter>
+        <email>koman@yna.co.kr</email>
+        <name>
+        <last-name>고</last-name>
+        <first-name>일환</first-name>
+        </name>
+        <company>연합뉴스</company>
+    </reporter>
+</article>
