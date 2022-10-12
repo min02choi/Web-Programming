@@ -33,20 +33,21 @@ content {
 date {
     display: block;
     font-size: 15px;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 reporter {
     display: block;
     font-size: 15px;
-    padding-top: 10px;
+    padding-top: 8px;
 }
 email {
-    color: darkgrey;
+    color: #515251;
     font-style: italic;
     /*border-right: 2px solid darkgrey;*/
 }
 name {
-
+    color: #515251;
+    font-style: italic;
 }
 company {
     display: block;
