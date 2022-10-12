@@ -1,0 +1,56 @@
+/*전체 문서 관련*/
+article {
+    padding: 40px;
+
+}
+
+/*제목*/
+title {
+
+}
+main-title {
+    display: block;
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 20px;
+    /*margin-bottom: 400px;*/
+}
+sub-title {
+    display: block;
+    font-size: 25px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    border-left: 3px solid black;
+}
+content {
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid darkgrey;
+}
+date {
+    display: block;
+    font-size: 15px;
+    padding-top: 10px;
+}
+reporter {
+    display: block;
+    font-size: 15px;
+    padding-top: 10px;
+}
+email {
+    color: darkgrey;
+    font-style: italic;
+    /*border-right: 2px solid darkgrey;*/
+}
+name {
+
+}
+company {
+    display: block;
+    padding-top: 10px;
+    font-size: 18px;
+
+}
