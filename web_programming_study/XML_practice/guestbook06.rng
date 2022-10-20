@@ -1,0 +1,42 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<start>
+    <element name="방명록">
+        <ref name="성명-이름"/>
+        <ref name="연락처"/>
+        <ref name="내용"/>
+    </element>
+</start>
+
+<define name="성명-이름">
+    <choice>
+        <text/>
+        <group>
+            <element name="성"><text/></element>
+            <element name="이름"><text/></element>
+        </group>
+    </choice>
+</define>
+
+<define name="연락처">
+    <oneOrMore>
+        <choice>
+            <element name="전자우편"><text/></element>
+            <element name="전화번호"><text/></element>
+        </choice>
+    </oneOrMore>
+</define>
+
+<define name="내용">
+    <element name="내용">
+        <optional>
+            <attribute name="언어">
+                <choice>
+                    <value>ko</value>
+                    <value>en</value>
+                    <value>jp</value>
+                </choice>
+            </attribute>
+        </optional>
+    </element>
+</define>
+</grammar>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE 방명록 [
+        <!ELEMENT 방명록 (성명, 전자우편, 내용)>
+        <!ELEMENT 성명 (#PCDATA)>
+        <!ELEMENT 전자우편 (#PCDATA)>
+        <!ELEMENT 내용 (#PCDATA)>
+        ]>
+<방명록>
+    <성명></성명>
+    <전자우편>min02choi@sookmyung.ac.kr</전자우편>
+    <내용>현재는 시험기간입니다.</내용>
+</방명록>

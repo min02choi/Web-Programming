@@ -1,0 +1,6 @@
+<element name="방명록" xmlns="http://relaxng.org/ns/structure/1.0">
+    <element name="성명"><text/></element>
+    <element name="전자우편"><text/></element>
+    <element name="내용"><text/></element>
+</element>
+

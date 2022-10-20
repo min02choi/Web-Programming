@@ -1,0 +1,44 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<start>
+    <element name="memo">
+        <ref name="information"/>
+        <ref name="passage"/>
+    </element>
+</start>
+
+<define name="information">
+    <element name="to">
+        <ref name="heading-name"/>
+    </element>
+    <element name="from">
+        <ref name="heading-name"/>
+    </element>
+    <element name="date"><text/></element>
+</define>
+
+<!-- 공통 부위는 묶을 수 있다. 마치 함수처럼! -->
+<define name="heading-name">
+    <element name="heading"><text/></element>
+    <element name="name"><text/></element>
+</define>
+
+<define name="passage">
+    <element name="body">
+        <zeroOrMore>
+            <element name="p">
+                <optional>
+                    <attribute name="len">
+                        <choice>
+                            <value>ko</value>
+                            <value>en</value>
+                            <value>jp</value>
+                        </choice>
+                    </attribute>
+                </optional>
+                <text/>
+            </element>
+        </zeroOrMore>
+    </element>
+</define>
+
+</grammar>

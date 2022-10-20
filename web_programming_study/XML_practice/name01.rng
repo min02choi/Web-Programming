@@ -1,0 +1,15 @@
+<element name="방명록" xmlns="http://relaxng.org/ns/structure/1.0">
+    <zeroOrMore>
+        <element name="성명">
+            <interleave>
+                <text/>
+                <optional>
+                    <element name="성"><text/></element>
+                </optional>
+                <optional>
+                    <element name="이름"><text/></element>
+                </optional>
+            </interleave>
+        </element>
+    </zeroOrMore>
+</element>

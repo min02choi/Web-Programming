@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<memo>
+    <header>
+        <to>
+            <heading>To: </heading>
+            <name>최산</name>
+        </to>
+        <from>
+            <heading>From: </heading>
+            <name>최민영</name>
+        </from>
+        <date>2022-10-20</date>
+    </header>
+    <body>
+        <p>안녕 나는 최민영이라고 해.</p>
+        <p>현재는 시험기간이란다.</p>
+        <p>다음 주에 전공시험 5개를 봐. 나 자신 화이팅</p>
+    </body>
+</memo>
