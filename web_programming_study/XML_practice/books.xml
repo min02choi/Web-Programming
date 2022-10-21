@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list>
+    <book inStock="12">
+        <title>두근두근 파이썬 자료구조</title>
+        <author>아빠</author>
+        <pages>500</pages>
+        <price currency="usd">39.99</price>
+    </book>
+    <book inStock="0">
+        <title>HTML 입문</title>
+        <author>임순범</author>
+        <pages>123</pages>
+        <price>24000</price>
+    </book>
+    <book inStock="8">
+        <title>
+            <subtitle>열혈강의</subtitle>
+            C++
+        </title>
+        <author>윤성우</author>
+        <pages>543</pages>
+        <price>34000</price>
+    </book>
+</list>

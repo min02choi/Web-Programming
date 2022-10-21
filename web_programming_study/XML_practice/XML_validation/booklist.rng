@@ -1,0 +1,44 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<start>
+    <element name="list">
+        <zeroOrMore>
+            <ref name="book"></ref>
+        </zeroOrMore>
+    </element>
+</start>
+
+<define name="book">
+    <element name="book">
+        <attribute name="inStock"><text/></attribute>
+        <ref name="book_mainInfo"></ref>
+        <ref name="book_subInfo"></ref>
+    </element>
+</define>
+
+<define name="book_mainInfo">
+    <element name="title">
+        <optional>
+            <element name="subtitle"><text/></element>
+        </optional>
+        <text/>
+    </element>
+    <element name="author"><text/></element>
+</define>
+
+<define name="book_subInfo">
+    <element name="pages"><text/></element>
+    <element name="price">
+        <optional>
+            <attribute name="currency">
+                <choice>
+                    <value>won</value>
+                    <value>usd</value>
+                    <value>yen</value>
+                    <value>euro</value>
+                </choice>
+            </attribute>
+        </optional>
+        <text/>
+    </element>
+</define>
+</grammar>
