@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<address-book>
+    <person per_id="201001">
+        <name>홍길동</name>
+        <pic file="hong.gif"/>
+        <address>140-742 서울시 용산구 청파동 2가 53-12</address>
+        <tel>02-710-9379</tel>
+        <email> webmaster@mm.sm.ac.kr </email>
+    </person>
+
+    <!--  다음 사람  -->
+    <person per_id="201002">
+        <name>임순범</name>
+        <pic file="sblim.gif"/>
+        <address>135-867 서울 강남구 삼성동 예홍빌라</address>
+        <tel preferred="true">02-710-9424</tel>
+        <tel>010-5329-9919</tel>
+        <email edress="sblim@sookmyung.ac.kr"/>
+    </person>
+</address-book>
