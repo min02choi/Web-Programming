@@ -1,0 +1,49 @@
+/*doc, title, content, p_red, p {*/
+/*    display: block;*/
+/*}*/
+
+doc {
+    display: block;
+    color: blue;
+}
+
+title {
+    display: block;
+    font-weight: bold;
+    color: red;
+    margin-bottom: 1em;
+}
+
+content {
+    display: list-item;
+    font-size: 10pt;
+}
+
+pic {
+    background-image: url("bald-eagle.jpg");
+    background-position: 50% 50%;
+    background-repeat: repeat;
+}
+
+p_red {
+    display: block;
+    color: aqua;
+}
+
+from p_red {
+    font-weight: bold;
+}
+
+p {
+    display: block;
+    font-size: 1pc;
+    font-variant: small-caps;
+    text-indent: 20px;
+
+}
+
+a {
+    vertical-align: bottom;
+}
+
+/*와 ctrl + d 단축키 하면 현재 커서에 있는 그 라인을 바로 하단에 복사해줌*/

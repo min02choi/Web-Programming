@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<list>
+    <book inStock="12">
+        <title>XML Bible</title>
+        <author>Gwyneth Paltrow</author>
+        <pages>652</pages>
+        <price currency="usd">39.99</price>
+    </book>
+    <book inStock="0">
+        <title>XML 클래스</title>
+        <author>임순범</author>
+        <pages>458</pages>
+        <price>19000</price>
+    </book>
+    <book inStock="8">
+        <title>
+            <subtitle>열혈강의</subtitle>
+            XML By Example
+        </title>
+        <author>홍길동</author>
+        <pages>529</pages>
+        <price>25000</price>
+    </book>
+</list>

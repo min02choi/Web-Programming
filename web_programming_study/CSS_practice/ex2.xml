@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/css" href="ex2.css"?>
+<doc>
+    <title>Example2</title>
+    <content>
+        <pic>xml.................................
+        asdfasdfasdf
+        asdf
+        asdf
+        asdf
+        asdfdddddddddddddddddddddddddddddddddddddd
+        </pic>
+        <p_red>
+            This is an example of <bi>CSS on XML</bi>
+        </p_red>
+        <p>
+            This is a <a>next line.</a>
+        </p>
+    </content>
+</doc>

@@ -1,0 +1,8 @@
+function myLoadXML(text) {
+        var xmlParser = new DOMParser(); // DOMParser 객체 생성
+        return xmlParser.parseFromString(text, "text/xml");  // 문자열을 파싱
+        }
+
+        text = "<book><title>XML 입문</title><author>일지매</author></book>" ;
+        xdoc = myLoadXML(text);
+        alert(myXMLText(xdoc));
