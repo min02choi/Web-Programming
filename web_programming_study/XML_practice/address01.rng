@@ -5,6 +5,7 @@
             <element name="name"><text/></element>
             <element name="pic">
                 <attribute name="file"><text/></attribute>
+<!--                <attribute name="file"/>-->
             </element>
             <element name="address"><text/></element>
             <oneOrMore>
