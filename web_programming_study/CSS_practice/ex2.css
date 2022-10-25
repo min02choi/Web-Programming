@@ -21,8 +21,10 @@ content {
 
 pic {
     background-image: url("bald-eagle.jpg");
-    background-position: 50% 50%;
     background-repeat: repeat;
+    width: 400px;
+    height: 300px;
+    padding: 300px;
 }
 
 p_red {

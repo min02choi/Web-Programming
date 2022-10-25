@@ -1,0 +1,30 @@
+<element name="뉴스기사" xmlns="http://relaxng.org/ns/structure/1.0" >
+    <zeroOrMore>
+        <element name="기사정보">
+            <attribute name="분류">
+                <choice>
+                    <value>정치</value>
+                    <value>경제</value>
+                    <value>스포츠</value>
+                    <value>사회</value>
+                </choice>
+            </attribute>
+            <element name="제목"><text/></element>
+            <element name="부제목"><text/></element>
+            <element name="기자">
+                <attribute name="소속">
+                    <choice>
+                        <value>정치부</value>
+                        <value>경제부</value>
+                        <value>시회부</value>
+                    </choice>
+                </attribute>
+                <oneOrMore>
+                    <element name="성명"><text/></element>
+                </oneOrMore>
+            </element>
+            <element name="이메일"><text/></element>
+            <element name="내용"><text/></element>
+        </element>
+    </zeroOrMore>
+</element>

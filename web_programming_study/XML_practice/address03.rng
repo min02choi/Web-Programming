@@ -1,0 +1,92 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+<start>
+    <element name="address-book">
+        <zeroOrMore>
+            <ref name="Person"/>
+        </zeroOrMore>
+    </element>
+</start>
+
+<define name="Person">
+    <element name="person">
+        <attribute name="per_id"/>
+        <ref name="Full-Name"/>
+        <ref name="Pic"/>
+        <ref name="Address"/>
+        <ref name="Tel-Num"/>
+        <ref name="Email"/>
+    </element>
+</define>
+
+<define name="Full-Name">
+    <element name="name">
+        <choice>
+            <text/>
+            <interleave>
+                <element name="fname"><text/></element>
+                <element name="lname"><text/></element>
+            </interleave>
+        </choice>
+    </element>
+</define>
+
+<define name="Pic">
+    <element name="pic">
+        <attribute name="file"/>
+    </element>
+</define>
+
+<define name="Full-addr">
+    <group>
+        <element name="postal-code"><text/></element>
+        <element name="region"><text/></element>
+        <element name="gu"><text/></element>
+        <element name="dong"><text/></element>
+        <element name="street"><text/></element>
+    </group>
+</define>
+
+<define name="Address">
+    <element name="address">
+        <choice>
+            <ref name="Full-addr"/>
+            <text/>
+        </choice>
+    </element>
+</define>
+
+<define name="Prefer">
+    <attribute name="preferred">
+        <choice>
+            <value>true</value>
+            <value>false</value>
+        </choice>
+    </attribute>
+</define>
+
+<define name="Tel-Num">
+    <oneOrMore>
+        <element name="tel">
+            <optional>
+                <ref name="Prefer"/>
+            </optional>
+            <text/>
+        </element>
+    </oneOrMore>
+</define>
+
+<define name="Email">
+    <oneOrMore>
+        <element name="email">
+            <optional>
+                <ref name="Prefer"/>
+            </optional>
+            <optional>
+                <attribute name="edress"/>
+            </optional>
+            <text/>
+        </element>
+    </oneOrMore>
+</define>
+
+</grammar>

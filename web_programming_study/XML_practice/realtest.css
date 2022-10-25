@@ -1,0 +1,35 @@
+기사정보 {
+    display: block;
+    margin: 10px;
+    padding: 5px;
+    border: 1px solid;
+    text-align: center;
+}
+
+제목 {
+    display: block;
+    font: 14pt bold;
+    /*font-weight: bold;*/
+}
+
+부제목 {
+    display: block;
+    font-size: 12pt;
+}
+
+기자 {
+    /*display: block;*/
+    font-size: 10pt;
+    margin: 10px;
+}
+
+이메일 {
+    /*display: inline;*/
+    font-size: 10pt;
+    /*margin: 10px;*/
+}
+
+내용 {
+    display: none;
+}
+

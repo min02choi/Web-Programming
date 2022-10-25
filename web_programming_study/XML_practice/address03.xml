@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<address-book>
+    <person per_id="s201001">
+        <name>
+            <fname>길동</fname>
+            <lname>홍</lname>
+        </name>
+        <pic file="hong.gif"/>
+        <address>
+            <postal-code>140-742</postal-code>
+            <region>서울시</region>
+            <gu>용산구</gu>
+            <dong>청파동 2가</dong>
+            <street>53-12</street>
+        </address>
+        <tel>02-710-9379</tel>
+        <email preferred="true"> webmaster@mm.sm.ac.kr </email>
+        <email>hong@gmail.com</email>
+    </person>
+
+    <!--  다음 사람  -->
+    <person per_id="s201002">
+        <name>
+            <lname>임</lname>
+            <fname>순범</fname>
+        </name>
+        <pic file="sblim.gif"/>
+        <address>135-867 서울 강남구 삼성동 예홍빌라</address>
+        <tel preferred="true">02-710-9424</tel>
+        <tel>010-5329-9919</tel>
+        <email edress="sblim@sookmyung.ac.kr">sblim@sookmyung.ac.kr</email>
+    </person>
+</address-book>

@@ -1,0 +1,39 @@
+<element name="address-book">
+    <zeroOrMore>
+        <element name="person">
+            <attribute name="per_id"><text/></attribute>
+            <element name="name">
+                <choice>
+                    <text/>
+                    <interleave>
+                        <element name="fname"><text/></element>
+                        <element name="lname"><text/></element>
+                    </interleave>
+                </choice>
+            </element>
+            <element name="pic">
+                <attribute name="file"><text/></attribute>
+            </element>
+            <element name="address"><text/></element>
+            <oneOrMore>
+                <element name="tel">
+                    <optional>
+                        <attribute name="preferred">
+                            <choice>
+                                <value>true</value>
+                                <value>false</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <text/>
+                </element>
+            </oneOrMore>
+            <element name="email">
+                <optional>
+                    <attribute name="edress"><text/></attribute>
+                </optional>
+                <text/>
+            </element>
+        </element>
+    </zeroOrMore>
+</element>
