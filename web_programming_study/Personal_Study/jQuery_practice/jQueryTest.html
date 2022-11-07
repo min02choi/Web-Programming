@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Test</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){               // Document Ready 이벤트 함수
+            $("h5").click(function(){                     // 선택자.이벤트 (함수)
+                $(this).hide();                             // 선택자.액션
+            });
+            $("button").click(function(){
+                $("h5").show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>JQuery 시작 예제</h3>
+    <h5>첫째줄. 클릭하면 사라진다.</h5>
+    <h5>둘째줄. 클릭하면 사라진다.</h5>
+    <button>다시 보기</button>
+</body>
+</html>

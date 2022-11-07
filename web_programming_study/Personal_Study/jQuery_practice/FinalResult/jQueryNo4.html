@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery No3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            var boxVal = "";
+            $(".boxes").click(function() {
+                if ($(this).is(':checked')) {
+                    boxVal = $(this).val();
+                }
+            });
+
+            var colVal = "";
+            $(".colorN").click(function() {
+                if ($(this).is(':selected')) {
+                    colVal = $(this).val();
+                }
+                var boxId = "#" + boxVal;
+                $(boxId).css("background-color", colVal);
+            });
+
+            $("#delColor").click(function(){
+                $("table td").css("background-color", "White");
+            });
+
+        });
+    </script>
+    <style>
+        td {
+            border: solid black 1px;
+            width: 100px;
+            height: 40px;
+        }
+        #Box01 {
+            background-color: cyan;
+        }
+        #Box02 {
+            background-color: magenta;
+        }
+        #Box03 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<p>
+    * 색상을 바꿀 박스 번호를 선택하시오 :
+    <input type="radio" name="box" class="boxes" value="Box01">Box01
+    <input type="radio" name="box" class="boxes" value="Box02">Box02
+    <input type="radio" name="box" class="boxes" value="Box03">Box03
+</p>
+<p>
+    * 박스의 색상을 선택하시오 :
+    <select size="3">
+        <option class="colorN" value="Red">Red</option>
+        <option class="colorN" value="Green">Green</option>
+        <option class="colorN" value="Blue">Blue</option>
+        <option class="colorN" value="Cyan">Cyan</option>
+        <option class="colorN" value="Magenta">Magenta</option>
+        <option class="colorN" value="Yellow">Yellow</option>
+    </select>
+</p>
+<table border="1" id="Box0">
+    <tbody>
+    <tr>
+        <td id="Box01">Box1</td>
+        <td id="Box02">Box2</td>
+        <td id="Box03">Box3</td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<button id="delColor">색상 지우기</button>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery No2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+
+            $(".colorN").on({
+                click:function(event) {
+                    var color = $(this).attr('value');
+                    $("#select").html(color);
+                    $("table td").css("background-color", color);
+                },
+                mouseenter:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                }
+            });
+            $("#delColor").click(function(){  // 버튼
+                $("table td").css("background-color", "White");
+            });
+
+        });
+    </script>
+    <style>
+        #Box0 {
+            border: solid black 1px;
+            width: 100px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+<p>
+    박스의 색상을 선택하시오 :
+    <span class="colorN" value="Red">Red</span>,
+    <span class="colorN" value="Green">Green</span>,
+    <span class="colorN" value="Blue">Blue</span>,
+    <span class="colorN" value="Cyan">Cyan</span>,
+    <span class="colorN" value="Magenta">Magenta</span>,
+    <span class="colorN" value="Yellow">Yellow</span>,
+</p>
+<p>
+    => 선택된 색상 : &lt;span id="result02"&gt;<span id="select"> _____ </span>&lt;/span&gt;
+</p>
+<table border="1" id="Box0">
+    <tbody>
+    <tr>
+        <td>Box0</td>
+    </tr>
+    </tbody>
+</table>
+<br/>
+<button id="delColor">색상 지우기</button>
+</body>
+</html>

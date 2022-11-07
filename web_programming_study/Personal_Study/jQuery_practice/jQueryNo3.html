@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery No3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".colorN").on({
+                click:function(event) {
+                    var boxNo = $("input[class=boxes]:checked").val();
+                    var color = $(this).attr('value');
+                    boxNo = "#" + boxNo;
+                    $("#result03").html(color);
+                    $(boxNo).css("background-color", color);
+                },
+                mouseenter:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                }
+            });
+
+            $("#delColor").click(function(){
+                $("table td").css("background-color", "White");
+            });
+
+        });
+    </script>
+    <style>
+        td {
+            border: solid black 1px;
+            width: 100px;
+            height: 40px;
+        }
+        #Box01 {
+            background-color: cyan;
+        }
+        #Box02 {
+            background-color: magenta;
+        }
+        #Box03 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        * 색상을 바꿀 박스 번호를 선택하시오 :
+        <input type="radio" name="box" class="boxes" value="Box01">Box01
+        <input type="radio" name="box" class="boxes" value="Box02">Box02
+        <input type="radio" name="box" class="boxes" value="Box03">Box03
+    </p>
+    <p>
+        * 박스의 색상을 선택하시오 :
+        <span class="colorN" value="Red">Red</span>,
+        <span class="colorN" value="Green">Green</span>,
+        <span class="colorN" value="Blue">Blue</span>,
+        <span class="colorN" value="Cyan">Cyan</span>,
+        <span class="colorN" value="Magenta">Magenta</span>,
+        <span class="colorN" value="Yellow">Yellow</span>,
+    </p>
+    <p>
+        => 선택된 색상 : &lt;span id="result03"&gt;<span id="result03"> _____ </span>&lt;/span&gt;
+    </p>
+    <table border="1" id="Box0">
+        <tbody>
+        <tr>
+            <td id="Box01">Box1</td>
+            <td id="Box02">Box2</td>
+            <td id="Box03">Box3</td>
+        </tr>
+        </tbody>
+    </table>
+    <br/>
+    <button id="delColor">색상 지우기</button>
+</body>
+</html>
