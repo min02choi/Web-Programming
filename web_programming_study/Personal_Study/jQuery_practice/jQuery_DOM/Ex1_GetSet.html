@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex1. jQuery DOM 읽기, 쓰기</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#check01").click(function() {
+                str1 = $("#book02 .author").text();
+                $("#check01_1").text(str1);
+                // HTML은 안되는데?
+                str2 = $("#book02 .author").html();
+                $("#check01_2").html(str2);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery DOM 읽기, 쓰기</h2>
+    <h3>도서 정보 관리(1)</h3>
+    <p id="book01">
+        1. HTML Bible,
+        <span class="author">Gywneth</span>,
+        <input type="text" size="4" value="30000">원
+    </p>
+    <p id="book02">
+        2. 웹프로그래밍,
+        <span class="author"><strong>임순범</strong></span>,
+        <input type="text" size="4" value="19000">원
+    </p>
+    <p id="book03">
+        3. Web, How to?,
+        <span class="author">홍길동</span>,
+        <input type="text" size="4" value="24000">원
+    </p>
+    <div>
+        <p>
+            1) 2번 책 저자는?
+            <input type="button" id="check01" value="확인"><br/>
+            - 결과(text): <span id="check01_1">...</span><br/>
+            - 결과(html): <span id="check01_2">...</span>
+        </p>
+    </div>
+</body>
+</html>
