@@ -9,10 +9,29 @@
             $("#check01").click(function() {
                 str1 = $("#book02 .author").text();
                 $("#check01_1").text(str1);
-                // HTML은 안되는데?
                 str2 = $("#book02 .author").html();
-                $("#check01_2").html(str2);
+                $("#check01_2").text(str2);
             });
+            $("#check02").click(function() {
+                $("#book01 .author").text("기네스");
+            });
+            $("#check03_1").click(function() {
+                str1 = "<strong>" + $("#book01 .author").text() + "</strong>"
+                $("#book01 .author").html(str1);
+            });
+            $("#check03_2").click(function() {
+                str1 = $("#book01 .author").text();
+                $("#book01 .author").html(str1);
+            });
+            $("#check04").click(function() {
+                price = $("#book02 input").val();
+                $("#check04_1").text(price);
+            });
+            $("#check05").click(function() {
+                price = $("#book02 input").val();
+                $("#book02 input").val(parseInt(price) + 2000);
+            });
+            // 6번부터 할 것
         });
     </script>
 </head>
@@ -40,6 +59,24 @@
             <input type="button" id="check01" value="확인"><br/>
             - 결과(text): <span id="check01_1">...</span><br/>
             - 결과(html): <span id="check01_2">...</span>
+        </p>
+        <p>
+            2) 1번 책 저자이름을 "기네스"로
+            <input type="button" id="check02" value="확인">
+        </p>
+        <p>
+            3) 1번 책 저자이름
+            <input type="button" id="check03_1" value="강조">
+            <input type="button" id="check03_2" value="원래대로">
+        </p>
+        <p>
+            4) 2번 책 가격은?
+            <input type="button" id="check04" value="확인">
+            <span id="check04_1"></span>
+        </p>
+        <p>
+            5) 2번 책 가격 2000원 인상
+            <input type="button" id="check05" value="결과">
         </p>
     </div>
 </body>

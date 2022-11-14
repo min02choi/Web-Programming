@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 1</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                },
+                click:function(event) {
+                    str1 = $(this).text();
+                    $("#result01").text(str1);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h4> 과목별 성적 목록</h4>
+    <div id="ex01">
+        <p>1. 프로그래밍 입문, 2021년 1학기, A0 </p>
+        <p>2. IT기술의 이해, 2022년 1학기, A0</p>
+        <p>3. 웹프로그래밍 기초, 2022년 1학기, A+</p>
+        <hr width=90%>
+        선택 : <span id="result01"> ______ </span>
+    </div>
+</body>
+</html>

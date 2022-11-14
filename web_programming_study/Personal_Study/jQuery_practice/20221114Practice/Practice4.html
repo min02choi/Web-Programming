@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 4</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            var counter = 0;
+            var mainBox = $(".main_box");
+            var box_col;
+
+            $(".colorN").on({
+                mouseover:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                },
+                click:function(event) {
+                    if (counter < 3) {
+                        counter++;
+                        box_no = "Box" + counter;
+
+                        add_box = "<td class='sub_box' id='box" + counter + "'>" + box_no + "<br/>" + "<button class='delete'>삭제</button></td>";
+                        $(mainBox).after(add_box);
+                        box_id = "#box" + counter;
+
+                        box_col = $(this).attr("value");
+                        // console.log(box_col);
+                        $(box_id).attr("style", "background-color:" + box_col);
+                    }
+                    // 잘안됨
+                    if (3 > counter > 0) {
+                        $(".delete").click(function(event) {
+                            console.log("clicked");
+                            // temp = $(this).parent();
+                            // $(temp).remove();
+                            $(this).parent().remove();
+                            counter--;
+                        });
+                    }
+                }
+            });
+
+            $("#all_delete").click(function() {
+                console.log("clicked all delete");
+                $(".sub_box").remove();
+                counter = 0;
+            });
+        });
+    </script>
+    <style>
+        td {
+            border: solid black 1px;
+            width: 100px;
+            height: 60px;
+        }
+
+        #delete {
+            margin-right: 10px;
+        }
+        #box1 {
+
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        추가할 박스의 색상을 선택하시오:
+        <span class="colorN" value="Red">Red</span>,
+        <span class="colorN" value="Green">Green</span>,
+        <span class="colorN" value="Blue">Blue</span>,
+        <span class="colorN" value="Cyan">Cyan</span>,
+        <span class="colorN" value="Magenta">Magenta</span>,
+        <span class="colorN" value="Yellow">Yellow</span>
+    </p>
+    <table border="1" id="box_table">
+        <td class="main_box">
+            <button id="all_delete">모두 삭제</button>
+        </td>
+
+
+    </table>
+</body>
+</html>

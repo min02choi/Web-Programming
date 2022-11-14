@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 문장에 커서가 올라가면~ 으로 수정 지금은 블록에 올라가기만 해도 다 변경됨 -->
+    <meta charset="UTF-8">
+    <title>Practice 2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            $("p").on({
+                mouseenter:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                },
+                click:function(event) {
+                    str1 = $(this).text();
+                    $("#result02").val(str1);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h4> 과목별 성적 목록</h4>
+    <div id="ex02">
+        <p>1. 프로그래밍 입문, 2021년 1학기, A0 </p>
+        <p>2. IT기술의 이해, 2022년 1학기, A0</p>
+        <p>3. 웹프로그래밍 기초, 2022년 1학기, A+</p>
+        <hr width=90%>
+        선택 : <input type="text" size="35" id="result02">
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice 3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+    <script>
+        $(document).ready(function(){
+            var sent_no;
+            $("p").on({
+                mouseenter:function() {
+                    $(this).css("font-weight", "bold");
+                },
+                mouseleave:function() {
+                    $(this).css("font-weight", "normal");
+                },
+                click:function(event) {
+                    str1 = $(this).text();
+                    $("#result03").val(str1);
+                    sent_no = $(this);
+                }
+            });
+            $("#btn03").click(function() {
+                str2 = $("input").val();
+                $(sent_no).text(str2);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h4> 과목별 성적 목록</h4>
+    <div id="ex03">
+        <p>1. 프로그래밍 입문, 2021년 1학기, A0 </p>
+        <p>2. IT기술의 이해, 2022년 1학기, A0</p>
+        <p>3. 웹프로그래밍 기초, 2022년 1학기, A+</p>
+        <hr width=90%>
+        선택 : <input type="text" size="35" id="result03"><br/>
+        <button id="btn03">내용변경</button>
+    </div>
+</body>
+</html>
