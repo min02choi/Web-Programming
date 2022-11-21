@@ -1,0 +1,31 @@
+article {
+    display: block;
+    margin: 20px;
+
+}
+
+company {
+    display: block;
+}
+
+title {
+    display: block;
+}
+
+main_title {
+    display: block;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+sub_title {
+    display: block;
+    font-size: 12pt;
+}
+
+writer {
+    display: block;
+    color: #515251;
+    font-size: 10pt;
+    font-style: italic;
+}

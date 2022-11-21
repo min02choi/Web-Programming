@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+<start> <!--intelliJ에서 생성해준 RNG-->
+    <element name="news">
+        <oneOrMore>
+            <element name="article">
+                <element name="company">
+                    <data type="NCName"/>
+                </element>
+                <element name="title">
+                    <element name="main_title">
+                        <text/>
+                    </element>
+                    <element name="sub_title">
+                        <text/>
+                    </element>
+                </element>
+                <element name="writer">
+                    <element name="editor_name">
+                        <text/>
+                    </element>
+                    <optional>
+                        <element name="editor_email">
+                            <attribute name="address1"/>
+                            <optional>
+                                <attribute name="address2"/>
+                            </optional>
+                        </element>
+                    </optional>
+                </element>
+            </element>
+        </oneOrMore>
+    </element>
+</start>
+</grammar>

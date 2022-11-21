@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="all_article.css"?>
+<news>
+    <!--민성님-->
+    <article>
+        <company>중앙일보</company>
+        <title>
+            <main_title>부산시, 인기예능.드라마 촬영으로 부산관광 열기 지핀다</main_title>
+            <sub_title>한류 열기 활성화로 부산 관광 증가 기대</sub_title>
+        </title>
+        <writer>
+            <editor_name>이상철 기자</editor_name>
+            <editor_email address1="leesangchul@gmail.com" address2="kimms926@naver.com"/>
+        </writer>
+    </article>
+    <article>
+        <company>중앙일보</company>
+        <title>
+            <main_title>경북의 10월, 가을축제로 물든다. </main_title>
+            <sub_title>수확의 기쁨, 가을 낭만, 치유와 힐링으로 가득 채워져</sub_title>
+        </title>
+        <writer>
+            <editor_name>노재현 기자</editor_name>
+        </writer>
+    </article>
+    <!--한빛님-->
+    <article>
+        <company>뉴시스</company>
+        <title>
+            <main_title>식품 해외직구 검사 10건당 1개는 위해성분 검출</main_title>
+            <sub_title/>
+        </title>
+        <writer>
+            <editor_name>안호균 기자</editor_name>
+            <editor_email address1="ahk@newsis.com"/>
+        </writer>
+    </article>
+    <article>
+        <company>연합뉴스</company>
+        <title>
+            <main_title>'아직 팬데믹 시대'…큰 변화 없는 야외 마스크 해제 첫날</main_title>
+            <sub_title/>
+        </title>
+        <writer>
+            <editor_name>정회성 기자</editor_name>
+            <editor_email address1="hs@yna.co.kr"/>
+        </writer>
+    </article>
+    <!--선진님-->
+    <article>
+        <company>이뉴스팀</company>
+        <title>
+            <main_title>줄 서서 먹는 숙대 맛집 닌자초밥, 놀라운 가성비로 SNS에서 화제</main_title>
+            <sub_title>[숙대입구역 맛집] 닌자초밥</sub_title>
+        </title>
+        <writer>
+            <editor_name>이뉴스팀</editor_name>
+            <editor_email address1="e-news@etnews.com"/>
+        </writer>
+    </article>
+    <article>
+        <company>더파워뉴스 </company>
+        <title>
+            <main_title>‘식신로드’에도 방영된 숙대입구맛집 서지스테이크 1등급 안심만 사용'</main_title>
+            <sub_title>서지스테이크</sub_title>
+        </title>
+        <writer>
+            <editor_name>김찬영</editor_name>
+            <editor_email address1="news@thepowernews.co.kr"/>
+        </writer>
+    </article>
+    <!--민영님-->
+    <article>
+        <company>연합뉴스</company>
+        <title>
+            <main_title>美 보안업체 "급증하는 러시아 해커 공격 뒤엔 軍 정보조직"</main_title>
+            <sub_title>"러시아軍, 해킹 사실 부인 위해 민간 해커 앞세워"</sub_title>
+        </title>
+        <writer>
+            <editor_name>고일환</editor_name>
+            <editor_email address1="koman@yna.co.kr"/>
+        </writer>
+    </article>
+    <article>
+        <company>조선일보</company>
+        <title>
+            <main_title>軍부터 원전까지 보안 구멍 ‘숭숭’…해커 놀이터 된 韓</main_title>
+            <sub_title>전쟁기념관, 해킹 공격으로 일주일간 전산망 마비</sub_title>
+        </title>
+        <writer>
+            <editor_name>이소연</editor_name>
+            <editor_email address1="sosoy@chosunbiz.com"/>
+        </writer>
+    </article>
+    <!--재인님-->
+    <article>
+        <company>숙명신문사 </company>
+        <title>
+            <main_title>LG유플 "집에 홀로 남겨진 댕냥이, 놀이부터 교육까지 한번에"</main_title>
+            <sub_title>LG유플 스마트홈 `펫토이` 출시</sub_title>
+        </title>
+        <writer>
+            <editor_name/>
+            <editor_email address1="kimdaeun@gmail.com" address2="kim@naver.com"/>
+        </writer>
+    </article>
+    <article>
+        <company>숙명신문사 </company>
+        <title>
+            <main_title>의무가 된 탄소발자국 지우기…이젠 협력사와 함께 뛰어라</main_title>
+            <sub_title>한류 열기 활성화로 부산 관광 증가 기대</sub_title>
+        </title>
+        <writer>
+            <editor_name>김다은 기자</editor_name>
+            <editor_email address1="kimdaeun@gmail.com" address2="kim@naver.com"/>
+        </writer>
+    </article>
+</news>

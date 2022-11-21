@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>all_article</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var doc;
+            var xroot;
+            $("#load_file").click(function(){
+                $.ajax({
+                    url: 'all_article.xml',
+                    dataType: 'xml',
+                    success: function(result) {
+                        // $("#result05").text(result);
+                        doc = result;
+                        xroot = result.documentElement;
+                        alert(xroot.nodeName);
+                    },
+                    error: function() {
+                        alert("파일 로딩 에러");
+                    }
+                });
+            });
+            $("#node_cnt").click(function(event) {
+                var nlist = xroot.getElementsByTagName("article");
+                // console.log(nlist.length);
+                alert(nlist.length);
+                // 첫 번쨰 버튼 안 눌렸을 때 상황 제거
+            });
+            $("#first_article").click(function(event) {
+                var first = xroot.children.item(0);
+                // alert(first.nodeName);
+
+                first_xml = $(first).html();
+                alert(first_xml);
+            });
+            $("#second_article").click(function() {
+                var second = xroot.children.item(1).children.item(1);
+                // alert(second.nodeName);
+                sec_title = $(second).find("main_title");
+                alert(sec_title.text());
+            });
+            $("#attr_val").click(function() {
+                var email = xroot.children.item(0).children.item(2).children.item(1);
+                // $(email2).find("editor_email");
+                // var attr = email.;    // 노드
+                var attr_val = email.getAttribute("address1");  // 값
+                alert(attr_val);
+                // alert(attr_val.getParentNode() + '="' + attr_val + '"');
+
+            });
+            $("#news_list").click(function() {
+                var all_article = "";
+                $(xroot).find("article").each(function() {
+                    var comp = $(this).find("company").text();
+                    var title = $(this).find("title").find("main_title").text() + ", " + $(this).find("title").find("sub_title").text();
+                    var editor = $(this).find("editor_name").text();
+
+                    all_article += comp + ", " + title + ", " + editor + "\n";
+                });
+                alert(all_article);
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>
+        1. 파일을 읽어서 루트엘리먼트의 이름을 확인한다.<br/>
+        루트엘리먼트의 이름을 확인한다.
+        <button id="load_file">문서 읽기</button>
+    </p>
+    <p>
+        2. 로드되어 있는 파일에서 뉴스 정보를 읽어온다.<br/>
+        포함하고 있는 뉴스의 갯수
+        <button id="node_cnt">검색1</button><br/>
+        첫 번째 뉴스의 정보(모두)
+        <button id="first_article">검색2</button><br/>
+        두 번쨰 뉴스의 제목
+        <button id="second_article">검색3</button><br/>
+    </p>
+    <p>
+        3. 로드되어 있는 파일에서 속성값을 읽어 온다. 뉴스요약 노드의 구조를 확인한다.<br/>
+        각 팀별로 구조가 다르므로 적당한 속성의 첫번째 값을 읽어 온다.<br/>
+        <button id="attr_val">xxx속성</button><br/>
+        뉴스목록의 내용을 텍스트만 출력한다.<br/>
+        <button id="news_list">뉴스목록</button><br/>
+    </p>
+</body>
+</html>
