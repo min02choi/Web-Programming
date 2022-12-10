@@ -14,7 +14,29 @@ http.createServer(function(req, res) {
 // 포트 지정 한한 경우. cmd창에서 한번만 실행되고 종료
 var fs = require("fs");
 
-fs.appendFile("myfile.txt", "iKON BOBBY", function(err) {
-    if (err) throw err;
-    console.log("Saved");
+// fs.appendFile("myfile.txt", "iKON BOBBY", function(err) {
+//     if (err) throw err;
+//     console.log("Saved");
+// });
+
+// fs.writeFile("myfile1.txt", "Evetything", function(err) {
+//     if (err) {
+//         throw err;
+//     }
+//     console.log("Written!!!");
+// });
+
+
+// fs.unlink("myfile1.txt", function(err) {
+//     if (err) {
+//         throw err;
+//     }
+//     console.log("File Deleted!");
+// });
+
+fs.rename("myfile.txt", "newtext.txt", function (err) {
+    if (err) {
+        throw err;
+    }
+    console.log("File Renamed!");
 });

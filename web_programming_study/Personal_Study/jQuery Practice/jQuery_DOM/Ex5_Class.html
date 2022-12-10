@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery DOM class</title>
+  <style>
+    .red {
+      color: red;
+    }
+    .blue {
+      color: blue;
+    }
+    .ital {
+      font-style: italic;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var selNo;
+      var book;
+      var no1Col;
+      $(".rBox").click(function() {
+        selNo = $(this).val();
+        book = $("#bookList").children().eq(selNo).children().eq(1);
+      });
+      $(".no1option").click(function() {
+        no1Col = $(this).val();
+      });
+      $("#but1").click(function() {
+        $(book).addClass(no1Col);
+      });
+      $("#but2a").click(function() {
+        $(book).addClass("ital");
+      });
+      $("#but2b").click(function() {
+        $(book).removeClass("ital");
+      });
+      $("#but3a").click(function() {
+        no3Class = $("#toClass").val();
+        path = "." + no3Class;
+        $(path).css("font-weight", "bold");
+      });
+      $("#but3b").click(function() {
+        no3Class = $("#toClass").val();
+        path = "." + no3Class;
+        $(path).css("font-size", "small");
+      });
+    });
+  </script>
+</head>
+<body>
+<h2>jQuery class with DOM</h2>
+  <table border="1">
+    <tbody id="bookList">
+      <tr> <td> </td><td>도서 정보</td> </tr>
+      <tr>
+        <td><input type="radio" class="rBox" name="book" value="1"></td>
+        <td>HTML5 Bible, Gywneth, 30000</td>
+      </tr>
+      <tr>
+        <td><input type="radio" class="rBox" name="book" value="2"></td>
+        <td>웹프로그래밍, 임순범, 19000</td>
+      </tr>
+      <tr>
+        <td><input type="radio" class="rBox" name="book" value="3"></td>
+        <td>Web, How to?, 홍길동, 24000</td>
+      </tr>
+      <tr>
+        <td><input type="radio" class="rBox" name="book" value="4"></td>
+        <td>컴퓨터 이해, 최윤철, 27000</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>
+    1) 색상클래스<br/>
+    <select size="2" id="color">
+      <option class="no1option" value="red">red</option>
+      <option class="no1option" value="blue">blue</option>
+    </select>
+    <button id="but1">설정</button>
+  </p>
+  <p>
+    2) Italic 클래스
+    <button id="but2a">italic 설정</button>
+    <button id="but2b">italic 해제</button>
+  </p>
+  <p>
+    3) 클래스 단위로 변화<br/>
+    <select size="3" id="toClass">
+      <option class="no3option" value="red">red</option>
+      <option class="no3option" value="blue">blue</option>
+      <option class="no3option" value="ital">italic</option>
+    </select>
+    <button id="but3a">Bold 설정</button>
+    <button id="but3b">작은 글자</button>
+  </p>
+</body>
+</html>
+
+선택된 요소의 값 받는 방법
+1. 상위 요소의 id 사용: select의 id의 val()을 할 경우 아래 option에서 선택된 요소의 value값이 들어옴(3번 문항)
+2. 선택지의 class 사용: 각각의 선택지 안에 class값을 지정하고 해당 class가 click()되었을 때 function 호출하여 $(this).val()을 통해 선택된 객체의 '값'을 받음. 따라서 value의 값을 재활용 가능한 문구로 설정하여 재이용 하면 좋을 것 같음(1번 문항).
+-> 해당 선택 값이 여러 군데에서 사용되는 경우 유용할것 같음.
+
+

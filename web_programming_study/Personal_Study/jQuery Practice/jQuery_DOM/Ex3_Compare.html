@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery DOM 탐색</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#add1").click(function() {
+                 elNode1 = document.createElement("li");
+                 elNode1.setAttribute("class", "text1");
+                 txNode = document.createTextNode("JavaScript Append 1e");
+                 elNode1.appendChild(txNode);
+                 document.getElementById("list").appendChild(elNode1);
+            });
+            $("#del1").click(function() {
+                $("#list li").remove(".text1");
+            });
+            $("#add2").click(function() {
+                elNode2 = document.createElement("li");
+                elNode2.setAttribute("class", "text2");
+                elNode2.innerHTML = "JavaScript Append 2e";
+                document.getElementById("list").append(elNode2);
+            });
+            $("#add3").click(function() {
+                str0 = "<li class='text3'>??</li>";
+                str1 = $(str0).text("jQuery Append 3e");
+                $("#list").append(str1);
+            });
+            $("#del3").click(function() {
+                $("#list li").remove(".text3");
+            });
+            $("#add4").click(function() {
+                full = "<li class='text4'>jQuery Append 4e</li>";
+                $("#list").append(full);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery DOM 비교</h2>
+    <h2>도서 정보 관리(3)</h2>
+    <ol id="list">
+        <li>HTML5 Bible, Gywneth, 30000원</li>
+        <li>웹프로그래밍, 임순범, 19000원</li>
+        <li>Web, How to?, 홍길동, 24000원</li>
+    </ol>
+
+    <p>
+        1) JS로 appendChild
+        <button id="add1">추가1</button>
+        <button id="del1">삭제1</button>
+    </p>
+    <p>
+        1) JS로 append 적용
+        <button id="add2">추가2</button>
+        <button id="del2">삭제2</button>
+    </p>
+    <p>
+        3) jQuery append (1)
+        <button id="add3">추가3</button>
+        <button id="del3">삭제3</button>
+    </p>
+    <p>
+        4) jQuery append (2)
+        <button id="add4">추가4</button>
+        <button id="del4">삭제4</button>
+    </p>
+</body>
+</html>

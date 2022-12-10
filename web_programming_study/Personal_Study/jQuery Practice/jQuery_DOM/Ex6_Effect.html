@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ex6. jQuery Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript">
+        var colNo = 0;
+        var colList = ["red", "green", "blue", "magenta"];
+        $(document).ready(function() {
+            $("#changeCol").click(function() {
+                if (colNo < colList.length) {
+                    $("#area").css("background-color", colList[colNo])
+                    $("#curSpan").text(colList[colNo]);
+                    colNo++;
+                }
+                else {
+                    colNo = 0;
+                    $("#area").css("background-color", colList[colNo])
+                }
+            });
+            $("#initCol").click(function() {
+                $("#area").css("background-color", "white");
+                $("#curSpan").text("white");
+            });
+            $("#slideCol").click(function() {
+                $("#area").slideToggle("slow");
+            });
+            $("#fadeCol").click(function() {
+                $("#area").fadeToggle("normal");
+            });
+        })
+    </script>
+</head>
+<body>
+    <h2>jQuery Effect</h2>
+    <input type="button" id="changeCol" value="색상 변경"/>
+    <input type="button" id="initCol" value="초기 색상"/>
+    <input type="button" id="slideCol" value="Slide"/>
+    <input type="button" id="fadeCol" value="Fade"/>
+    <div id="area">
+        <p>현재 색상:<span id="curSpan">init</span></p>
+        <p>변경 색상:<span id="nxtSpan">init</span></p>
+    </div>
+</body>
+</html>

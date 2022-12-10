@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery DOM 탐색</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var naver = $("#list").children().eq(1);
+            var str = "<li class='google'>Google: <url>https://www.google.com/</url></li>";
+            $("#a1").click(function() {
+                $(naver).append(str);
+            });
+            $("#a2").click(function() {
+                $(naver).before(str);
+            });
+            $("#adel").click(function() {
+                $("#list li").remove(".google");
+            });
+            // 2 번부터 하세요 넹
+            // 아니 왜 안됨? 개빡치네
+            $("#makeLink").click(function() {
+                $("li url").each(function() {
+                    addr = $(this).text();      // 주소를 text로 받음
+                    console.log(addr);
+                    str1 = "<a herf='" + addr + "'>" + addr + "</a>";
+                    console.log(str1);
+                    $(this).html(str1);
+                });
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery DOM 생성 - 링크, 이미지</h2>
+    <h2>홈페이지 주소 목록</h2>
+    <ol id="list">
+        <li>WWW: <url id="link1">https://www.w3.org/</url></li>
+        <li>Naver: <url id="link2">https://www.naver.com/</url></li>
+        <li>Daum: <url id="link3">https://www.daum.net/</url></li>
+    </ol>
+
+    <p>
+        1) 구글 주소 추가<br/>
+        <button id="a1">naver 뒤</button>
+        <button id="a2">naver 앞</button>
+        <button id="adel">삭제</button>
+    </p>
+    <p>
+        2) 주소에 링크만들기
+        <button id="makeLink">링크생성</button>
+    </p>
+</body>
+</html>

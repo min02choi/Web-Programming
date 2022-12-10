@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery DOM 탐색</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#q1").click(function(e) {
+                author1 = $("#tb").children().eq(1).children().eq(2);
+                $("#a1").text(author1.text());
+            });
+            $("#q2").click(function() {
+                author1 = $("#tb").children().eq(1).children().eq(2);
+                $(author1).text("기네스");
+            });
+            $("#q3").click(function() {
+                book2 = $("#tb").children().eq(2).children().eq(3);
+                changed = parseInt($(book2).text()) + 2000;
+                $(book2).text(changed);
+            });
+            $("#q4").click(function() {
+                author3 = $("#tb").children().eq(3).children().eq(2);
+                $(author3).css("color", "cyan");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>jQuery DOM 탐색</h2>
+    <h2>도서 정보 관리(2)</h2>
+    <table border="1">
+        <tbody id="tb">
+            <tr><td></td><td>제목</td><td>저자</td><td>가격</td></tr>
+            <tr><td>1</td><td>책1</td><td>최진영</td><td>30000</td></tr>
+            <tr><td>2</td><td>책2</td><td>엄마</td><td>19000</td></tr>
+            <tr><td>3</td><td>책3</td><td>아빠</td><td>24000</td></tr>
+        </tbody>
+    </table>
+    <p>
+        1번 책 저자는?
+        <button id="q1">확인</button> <br/>
+        - 결과(text): <span id="a1">...</span>
+    </p>
+    <p>
+        1번 책 저자 이름을 기네스로
+        <button id="q2">변경</button> <br/>
+    </p>
+    <p>
+        2번 책 가격 2000원 인상:
+        <button id="q3">결과</button> <br/>
+    </p>
+    <p>
+        3번 책 저자 이름을 cyan 색으로
+        <button id="q4">채우기</button> <br/>
+    </p>
+</body>
+</html>
