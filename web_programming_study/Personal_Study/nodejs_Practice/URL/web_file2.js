@@ -12,6 +12,7 @@ myserver.on("close", function() { });
 myserver.on("request", function (request, res) {
     var req = url.parse(request.url, true);
     var page = req.pathname;
+    var data = req.query;       // 기본적으로 찢어 놓을 것
 
     if (page.match('.htm')) {
         console.log("HTML 문서 요청: %s", page);
@@ -38,6 +39,8 @@ myserver.on("request", function (request, res) {
             '    <p> 전달 파라메터 : ' + req.search + ' </p>'+
             '  </body>'+
             '</html>');
+        console.log("pathname: " + req.pathname);
+        console.log("search: " + data.name);
         res.end();
     }
 });

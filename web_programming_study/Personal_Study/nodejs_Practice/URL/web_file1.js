@@ -26,10 +26,10 @@ myserver.on("request", function(request, res) {
 
     fs.readFile(filename, function(err, data) {
         if (err) {
-            res.writeHead(404, {"Content-Type": "text/html"});
+            res.writeHead(404, {"Content-Type": "text/html; charset=utf-8"});
             return res.end("404 Not Found");
         }
-        res.writeHead(200, {"Content-Type": "text/html"});
+        res.writeHead(200, {"Content-Type": "text/html; charset=utf-8"});
         res.write(data);
         return res.end();
     });
@@ -37,5 +37,5 @@ myserver.on("request", function(request, res) {
 
 // 서버를 종료할 떄 발생
 myserver.on("close", function() {
-    console.log("나의 웹서버 종료");
+    console.log("나의 웹서버 종료!");
 });
