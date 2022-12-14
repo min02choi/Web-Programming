@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <input type="button"  value="JS 배열을 JSON으로" onClick="myTest02(book)" />
+    <input type="button"  value="string을 JSON으로" onClick="myTest03(book2)" />
+    <script>
+        var book = [    // 자바스크립트 배열
+            { title : "XML Bible",  author : "Gwyneth Paltrow",  price : 40000 },
+            { title : "XML 클래스",  author : "임순범",  price : 19000 } ,
+            { "title" : "XML By Example",  "author" : "홍길동",  "price" : 25000 }
+        ]
+        var book2 =                        // string
+            '[ { "title1" : "XML Bible", "author" : "Gwyneth Paltrow", "price" : 40000 }, { "title" : "XML 클래스", "author" : "임순범", "price" : 19000 }, { "title" : "XML By Example", "author" : "홍길동", "price" : 25000 } ]'
+
+        function myTest02(arr) {
+            var display = JSON.stringify(arr);
+            document.getElementById("area02").innerText = display;
+        }
+        function myTest03(arr) {
+            var books = JSON.parse(arr);
+            var display = JSON.stringify(books);    // JSON 배열, string 형태
+            document.getElementById("area03").innerText = display;
+
+            // JSON 참조 --> JSON.parse(arr) 한 것에 대해서!!
+            document.getElementById("area04").innerText = books[0].author;
+        }
+    </script>
+</head>
+<body>
+    <div id="area02"></div>
+    <div id="area03"></div>
+    <div id="area04"></div>
+</body>
+</html>

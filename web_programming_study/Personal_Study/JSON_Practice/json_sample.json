@@ -1,0 +1,22 @@
+"list" : [
+  { "title" : "XML Bible",
+    "author" : "Gwyneth",
+    "price" : 40000
+  },
+  { "title" : "HTML Bible",
+    "author" : "Gwyneth",
+    "price" : 20000
+  }
+]
+
+
+var list = [
+  { title : "XML Bible",
+    author : "Gwyneth",
+    price : 40000
+  },
+  { title : "HTML Bible",
+    "author" : "Gwyneth",
+    "price" : 40000
+  }
+]
